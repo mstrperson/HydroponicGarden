@@ -70,6 +70,10 @@ void drainCooldownComplete()
 
 void setup() 
 {
+  
+  pinMode(TANK_FULL_PIN, INPUT_PULLUP);
+  digitalWrite(TANK_FULL_PIN, HIGH);
+  
   // set the callback function for the drainCooldownThread.
   drainCooldownThread.onRun(drainCooldownComplete);
 
